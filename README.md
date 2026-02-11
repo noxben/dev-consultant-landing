@@ -12,7 +12,7 @@ This landing page showcases strategic advisory services in international develop
 
 ## 🚀 Live Demo
 
-**View the live site:** [https://YOUR-USERNAME.github.io/consultant-landing/](https://YOUR-USERNAME.github.io/consultant-landing/)
+**View the live site:** [https://noxben.github.io/dev-consultant-landing/](https://noxben.github.io/dev-consultant-landing/)
 
 ## 📋 Features
 
@@ -33,11 +33,11 @@ This landing page showcases strategic advisory services in international develop
 ## 📁 Project Structure
 
 ```
-consultant-landing/
+dev-consultant-landing/
 ├── index.html              # Main landing page
 ├── versions/               # Version history
-│   ├── v1-consultant-landing.html
-│   ├── v2-consultant-landing.html
+│   ├── v1-dev-consultant-landing.html
+│   ├── v2-dev-consultant-landing.html
 │   └── version-notes.md
 ├── assets/                 # Static assets
 │   ├── images/            # Images and graphics
@@ -83,8 +83,8 @@ Based on 8px grid: 0.5rem (8px), 1rem (16px), 1.5rem (24px), 2rem (32px), 3rem (
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/consultant-landing.git
-   cd consultant-landing
+   git clone https://github.com/noxben/dev-consultant-landing.git
+   cd dev-consultant-landing
    ```
 
 2. **Open in browser**
@@ -111,7 +111,7 @@ Based on 8px grid: 0.5rem (8px), 1rem (16px), 1.5rem (24px), 2rem (32px), 3rem (
 2. Go to Settings → Pages
 3. Select source: `main` branch, `/ (root)` folder
 4. Save and wait 1-2 minutes
-5. Your site is live at `https://YOUR-USERNAME.github.io/consultant-landing/`
+5. Your site is live at `https://noxben.github.io/dev-consultant-landing/`
 
 **Other Options**
 - **Netlify**: Drag and drop deployment
@@ -217,7 +217,7 @@ MIT License - see [LICENSE](LICENSE) file for details
 ## 👤 Author
 
 **Strategic Development Advisory**
-- Website: [https://YOUR-USERNAME.github.io/consultant-landing/](https://YOUR-USERNAME.github.io/consultant-landing/)
+- Website: [https://noxben.github.io/dev-consultant-landing/](https://noxben.github.io/dev-consultant-landing/)
 - Email: your.email@example.com
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
 
