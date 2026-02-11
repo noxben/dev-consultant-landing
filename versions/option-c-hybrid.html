@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Development Advisory | Navigating Complexity with Institutional Insight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --midnight: #1a2332;
+            --slate: #4a5568;
+            --sand: #e8dfd2;
+            --terra: #c27355;
+            --sage: #8a9a7b;
+            --ice: #f7f9fb;
+            --gold: #d4a574;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--midnight);
+            background: var(--ice);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(247, 249, 251, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(26, 35, 50, 0.1);
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--midnight);
+        }
+
+        .cta-button {
+            background: var(--midnight);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: var(--terra);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(194, 115, 85, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--midnight) 0%, #2d3e50 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(194, 115, 85, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(138, 154, 123, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="rgba(232,223,210,0.03)"/></svg>') no-repeat bottom;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-label {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--sand);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            animation: fadeIn 1s ease 0.3s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+            color: white;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .hero h1 strong {
+            font-weight: 600;
+            color: var(--terra);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--sand);
+            max-width: 650px;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.7s both;
+        }
+
+        .hero-cta {
+            animation: fadeInUp 1s ease 0.9s both;
+        }
+
+        .hero .cta-button {
+            background: var(--terra);
+            padding: 1rem 3rem;
+            font-size: 1rem;
+        }
+
+        .hero .cta-button:hover {
+            background: var(--sage);
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 8rem 3rem;
+            background: white;
+            position: relative;
+        }
+
+        .problem::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--sand), transparent);
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .problem h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: var(--midnight);
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+
+        .problem-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .problem-text {
+            font-size: 1.1rem;
+            color: var(--slate);
+            line-height: 1.9;
+        }
+
+        .problem-highlight {
+            background: var(--sand);
+            padding: 3rem;
+            position: relative;
+        }
+
+        .problem-highlight::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 8rem;
+            position: absolute;
+            top: -2rem;
+            left: 2rem;
+            color: var(--terra);
+            opacity: 0.3;
+        }
+
+        .problem-highlight p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: var(--midnight);
+            font-style: italic;
+        }
+
+        /* NEW: Transition Advantage Section */
+        .advantage {
+            padding: 8rem 3rem;
+            background: linear-gradient(135deg, var(--midnight) 0%, #2d3e50 100%);
+            color: white;
+            position: relative;
+        }
+
+        .advantage::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(138, 154, 123, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .advantage-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .advantage h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .advantage h2 span {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .advantage-card {
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .advantage-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .advantage-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .advantage-card p {
+            font-size: 1.05rem;
+            color: var(--sand);
+            line-height: 1.8;
+        }
+
+        .advantage-statement {
+            padding: 3rem;
+            background: rgba(212, 165, 116, 0.1);
+            border-left: 4px solid var(--gold);
+        }
+
+        .advantage-statement p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--sand);
+            max-width: 900px;
+        }
+
+        .advantage-statement strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 8rem 3rem;
+            background: white;
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .service-card {
+            border-left: 3px solid var(--terra);
+            padding-left: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateX(10px);
+        }
+
+        .service-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--terra);
+            opacity: 0.5;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--midnight);
+        }
+
+        .service-card p {
+            color: var(--slate);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .service-card ul {
+            margin-top: 1.5rem;
+            list-style: none;
+        }
+
+        .service-card li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+            color: var(--slate);
+        }
+
+        .service-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--sage);
+        }
+
+        /* Proof Section */
+        .proof {
+            padding: 8rem 3rem;
+            background: var(--sand);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            font-weight: 600;
+            color: var(--midnight);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--slate);
+            line-height: 1.6;
+        }
+
+        .logos {
+            margin-top: 6rem;
+            text-align: center;
+        }
+
+        .logos-label {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 3rem;
+        }
+
+        .logos-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .logo-item {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--midnight);
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-item:hover {
+            opacity: 1;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 8rem 3rem;
+            background: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: var(--midnight);
+            margin-bottom: 2rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            color: var(--slate);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .final-cta .cta-button {
+            padding: 1.25rem 3.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            padding: 3rem;
+            background: var(--midnight);
+            color: var(--sand);
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .problem-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .advantage-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .problem h2,
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: var(--terra);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Strategic Advisory</div>
+            <a href="#contact" class="cta-button">Schedule Consultation</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label">Strategic Development Advisory</div>
+                <h1>Navigating <strong>Complexity</strong>, Delivering Impact</h1>
+                <p class="hero-subtitle">
+                    Twenty years of institutional memory. Regional networks forged in the field. 
+                    The ability to turn policy into practice—and results into sustainability.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-button">Let's Talk</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="problem">
+        <div class="section-container">
+            <div class="section-label">The Challenge</div>
+            <h2>International development is shifting. You need a partner who understands both the D.C. boardroom and the regional reality.</h2>
+            <div class="problem-content">
+                <div class="problem-text">
+                    <p>
+                        The landscape has changed overnight. Budgets are shrinking. Compliance requirements are tightening. 
+                        Local partnerships are more critical than ever—but also more complex.
+                    </p>
+                    <p style="margin-top: 1.5rem;">
+                        You need someone who's been there. Someone who knows how to navigate the labyrinth of federal procurement, 
+                        build coalitions across competing interests, and deliver measurable impact in environments where nothing is straightforward.
+                    </p>
+                </div>
+                <div class="problem-highlight">
+                    <p>
+                        The difference between success and failure isn't just strategy—it's understanding 
+                        how things actually work on the ground.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantage">
+        <div class="advantage-container">
+            <div class="section-label" style="color: var(--sand);">The Transition Advantage</div>
+            <h2>What was once <span>internal</span> is now your <span>strategic asset</span>.</h2>
+            
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <h3>The Networks Remain Active</h3>
+                    <p>
+                        Regional stakeholder relationships don't disappear with organizational transitions. 
+                        They remain accessible—and actionable.
+                    </p>
+                </div>
+                
+                <div class="advantage-card">
+                    <h3>The Insights Are Available</h3>
+                    <p>
+                        Two decades of understanding how D.C. policy translates to field execution. 
+                        How compliance actually works. What makes programs succeed.
+                    </p>
+                </div>
+                
+                <div class="advantage-card">
+                    <h3>The Relationships Endure</h3>
+                    <p>
+                        While agencies pivot, the people who make development work—government officials, 
+                        civil society leaders, implementing partners—remain engaged.
+                    </p>
+                </div>
+            </div>
+
+            <div class="advantage-statement">
+                <p>
+                    <strong>With over 20 years of executive leadership at USAID</strong>—including service as Interim Assistant 
+                    Administrator for Asia and Assistant General Counsel—I provide the continuity and strategic foresight 
+                    organizations need to navigate this disruption. I help partners translate institutional memory into 
+                    competitive advantage.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="section-container">
+            <div class="section-label">Core Services</div>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 1rem; font-weight: 400; color: var(--midnight);">
+                How I Help You Navigate This Moment
+            </h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>Strategic De-Brief & Analysis</h3>
+                    <p>
+                        Understand the why behind recent changes and the how of moving forward. I provide intelligence 
+                        that helps you see around corners and position for what's next.
+                    </p>
+                    <ul>
+                        <li>Policy transition analysis</li>
+                        <li>Stakeholder mapping and strategy</li>
+                        <li>Scenario planning and positioning</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>The Regulatory Compass</h3>
+                    <p>
+                        Navigate evolving compliance frameworks with confidence. From USAID ADS to FAR, 
+                        I help you audit portfolios and stay ahead of requirements.
+                    </p>
+                    <ul>
+                        <li>Compliance post-mortems</li>
+                        <li>Risk assessment and mitigation</li>
+                        <li>Audit preparation and response</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>The Network Map</h3>
+                    <p>
+                        Leverage decades of regional networks that remain active across Asia, Latin America, 
+                        and beyond. I help you build the partnerships that deliver results.
+                    </p>
+                    <ul>
+                        <li>Regional stakeholder engagement</li>
+                        <li>Government and civil society liaison</li>
+                        <li>Coalition building and facilitation</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">04</div>
+                    <h3>Proposal Strategy & Positioning</h3>
+                    <p>
+                        Win in competitive landscapes by understanding what evaluators actually seek. 
+                        I help you craft proposals that stand out and deliver.
+                    </p>
+                    <ul>
+                        <li>Capture strategy and positioning</li>
+                        <li>Technical approach refinement</li>
+                        <li>Past performance storytelling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proof">
+        <div class="section-container">
+            <div class="section-label">Track Record</div>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--midnight); font-weight: 400;">
+                Impact by the Numbers
+            </h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">$200M+</div>
+                    <p class="stat-label">Portfolio Value Managed<br>Across Multiple Regions</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <p class="stat-label">Years of Field Experience<br>in Complex Environments</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15</div>
+                    <p class="stat-label">Countries with Active<br>Networks & Partnerships</p>
+                </div>
+            </div>
+
+            <div class="logos">
+                <div class="logos-label">Trusted By Leading Organizations</div>
+                <div class="logos-grid">
+                    <div class="logo-item">USAID</div>
+                    <div class="logo-item">UNDP</div>
+                    <div class="logo-item">World Bank</div>
+                    <div class="logo-item">Save the Children</div>
+                    <div class="logo-item">CARE</div>
+                    <div class="logo-item">Mercy Corps</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta" id="contact">
+        <div class="section-container">
+            <h2>Ready to Navigate What's Next?</h2>
+            <p>
+                Let's discuss how institutional knowledge and regional expertise can help your organization 
+                thrive in this new landscape.
+            </p>
+            <a href="mailto:your.email@example.com" class="cta-button">Schedule a Consultation</a>
+            <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--slate);">
+                Or reach me directly at: <strong>+1 (555) 123-4567</strong>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Strategic Development Advisory. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .stat-card, .advantage-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
