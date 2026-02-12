@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institutional Knowledge in Transition | Strategic Development Advisory</title>
+    <title>Strategic Development Advisory | Navigating Complexity with Institutional Insight</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -92,7 +92,7 @@
             box-shadow: 0 10px 30px rgba(194, 115, 85, 0.3);
         }
 
-        /* Hero Section - Bold Transition Focus */
+        /* Hero Section */
         .hero {
             margin-top: 80px;
             min-height: 90vh;
@@ -111,8 +111,20 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 50%, rgba(194, 115, 85, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(138, 154, 123, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="rgba(232,223,210,0.03)"/></svg>') no-repeat bottom;
+            background-size: cover;
             z-index: 1;
         }
 
@@ -137,16 +149,16 @@
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 800px;
         }
 
         .hero-label {
             font-size: 0.9rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--sand);
             margin-bottom: 1.5rem;
-            font-weight: 500;
+            font-weight: 400;
             animation: fadeIn 1s ease 0.3s both;
         }
 
@@ -167,62 +179,48 @@
 
         .hero h1 strong {
             font-weight: 600;
-            color: var(--gold);
+            color: var(--terra);
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--sand);
-            max-width: 750px;
-            line-height: 1.8;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.7s both;
-        }
-
-        .hero-pitch {
-            font-size: 1.1rem;
-            color: rgba(232, 223, 210, 0.9);
-            max-width: 750px;
+            max-width: 650px;
             line-height: 1.8;
             font-weight: 300;
             margin-bottom: 3rem;
-            padding-left: 2rem;
-            border-left: 3px solid var(--gold);
-            animation: fadeInUp 1s ease 0.9s both;
+            animation: fadeInUp 1s ease 0.7s both;
         }
 
         .hero-cta {
-            animation: fadeInUp 1s ease 1.1s both;
+            animation: fadeInUp 1s ease 0.9s both;
         }
 
         .hero .cta-button {
-            background: var(--gold);
+            background: var(--terra);
             padding: 1rem 3rem;
             font-size: 1rem;
-            color: var(--midnight);
         }
 
         .hero .cta-button:hover {
-            background: var(--terra);
-            color: white;
+            background: var(--sage);
         }
 
-        /* Value Proposition Section */
-        .value-prop {
+        /* Problem Section */
+        .problem {
             padding: 8rem 3rem;
             background: white;
             position: relative;
         }
 
-        .value-prop::before {
+        .problem::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            left: 10%;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--sand), transparent);
         }
 
         .section-container {
@@ -239,65 +237,153 @@
             font-weight: 500;
         }
 
-        .value-prop h2 {
+        .problem h2 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 3rem;
             font-weight: 400;
             line-height: 1.3;
             color: var(--midnight);
             max-width: 800px;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
-        .value-grid {
+        .problem-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            margin-top: 4rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
         }
 
-        .value-card {
-            padding: 2.5rem;
-            background: var(--ice);
-            border-top: 3px solid var(--gold);
-            transition: all 0.3s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(26, 35, 50, 0.1);
-        }
-
-        .value-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            color: var(--midnight);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .value-card p {
-            font-size: 1.05rem;
+        .problem-text {
+            font-size: 1.1rem;
             color: var(--slate);
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
-        /* Services Section - Reframed */
-        .services {
+        .problem-highlight {
+            background: var(--sand);
+            padding: 3rem;
+            position: relative;
+        }
+
+        .problem-highlight::before {
+            content: '"';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 8rem;
+            position: absolute;
+            top: -2rem;
+            left: 2rem;
+            color: var(--terra);
+            opacity: 0.3;
+        }
+
+        .problem-highlight p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: var(--midnight);
+            font-style: italic;
+        }
+
+        /* NEW: Transition Advantage Section */
+        .advantage {
             padding: 8rem 3rem;
-            background: var(--midnight);
+            background: linear-gradient(135deg, var(--midnight) 0%, #2d3e50 100%);
             color: white;
             position: relative;
         }
 
-        .services::before {
+        .advantage::before {
             content: '';
             position: absolute;
             top: 0;
+            left: 0;
             right: 0;
-            width: 40%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(212, 165, 116, 0.1) 0%, transparent 70%);
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(138, 154, 123, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .advantage-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .advantage h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .advantage h2 span {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .advantage-card {
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .advantage-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .advantage-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .advantage-card p {
+            font-size: 1.05rem;
+            color: var(--sand);
+            line-height: 1.8;
+        }
+
+        .advantage-statement {
+            padding: 3rem;
+            background: rgba(212, 165, 116, 0.1);
+            border-left: 4px solid var(--gold);
+        }
+
+        .advantage-statement p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--sand);
+            max-width: 900px;
+        }
+
+        .advantage-statement strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 8rem 3rem;
+            background: white;
+            position: relative;
         }
 
         .services-grid {
@@ -305,12 +391,10 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 4rem;
             margin-top: 4rem;
-            position: relative;
-            z-index: 2;
         }
 
         .service-card {
-            border-left: 3px solid var(--gold);
+            border-left: 3px solid var(--terra);
             padding-left: 2rem;
             transition: transform 0.3s ease;
         }
@@ -319,12 +403,13 @@
             transform: translateX(10px);
         }
 
-        .service-icon {
-            font-size: 1.2rem;
-            color: var(--gold);
+        .service-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--terra);
+            opacity: 0.5;
+            line-height: 1;
             margin-bottom: 1rem;
-            font-weight: 600;
-            letter-spacing: 1px;
         }
 
         .service-card h3 {
@@ -332,11 +417,11 @@
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: white;
+            color: var(--midnight);
         }
 
         .service-card p {
-            color: var(--sand);
+            color: var(--slate);
             line-height: 1.8;
             font-size: 1.05rem;
         }
@@ -350,14 +435,14 @@
             padding-left: 1.5rem;
             position: relative;
             margin-bottom: 0.75rem;
-            color: var(--sand);
+            color: var(--slate);
         }
 
         .service-card li::before {
             content: '→';
             position: absolute;
             left: 0;
-            color: var(--gold);
+            color: var(--sage);
         }
 
         /* Proof Section */
@@ -479,7 +564,12 @@
                 font-size: 1.1rem;
             }
 
-            .value-grid {
+            .problem-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .advantage-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -492,6 +582,11 @@
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
+
+            .problem h2,
+            .final-cta h2 {
+                font-size: 2rem;
+            }
         }
 
         html {
@@ -499,8 +594,8 @@
         }
 
         ::selection {
-            background: var(--gold);
-            color: var(--midnight);
+            background: var(--terra);
+            color: white;
         }
     </style>
 </head>
@@ -515,112 +610,141 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-label">Institutional Knowledge in a Time of Transition</div>
-                <h1>The <strong>Externalized Brain</strong> of U.S. Foreign Assistance</h1>
+                <div class="hero-label">Strategic Development Advisory</div>
+                <h1>Navigating <strong>Complexity</strong>, Delivering Impact</h1>
                 <p class="hero-subtitle">
-                    As the landscape of U.S. foreign assistance undergoes a historic pivot, the bridge between 
-                    past policy and future implementation has never been more vital.
-                </p>
-                <p class="hero-pitch">
-                    With over 20 years of executive leadership at USAID—including service as Interim Assistant Administrator 
-                    for Asia and Assistant General Counsel—I offer an unmatched perspective on the legal and operational 
-                    mechanics of global development. I help organizations translate institutional memory into strategic advantage.
+                    Twenty years of institutional memory. Regional networks forged in the field. 
+                    The ability to turn policy into practice—and results into sustainability.
                 </p>
                 <div class="hero-cta">
-                    <a href="#contact" class="cta-button">Access This Knowledge</a>
+                    <a href="#contact" class="cta-button">Let's Talk</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="value-prop">
+    <section class="problem">
         <div class="section-container">
-            <div class="section-label">The Opportunity</div>
-            <h2>What was once internal is now your strategic asset.</h2>
+            <div class="section-label">The Challenge</div>
+            <h2>International development is shifting. You need a partner who understands both the D.C. boardroom and the regional reality.</h2>
+            <div class="problem-content">
+                <div class="problem-text">
+                    <p>
+                        The landscape has changed overnight. Budgets are shrinking. Compliance requirements are tightening. 
+                        Local partnerships are more critical than ever—but also more complex.
+                    </p>
+                    <p style="margin-top: 1.5rem;">
+                        You need someone who's been there. Someone who knows how to navigate the labyrinth of federal procurement, 
+                        build coalitions across competing interests, and deliver measurable impact in environments where nothing is straightforward.
+                    </p>
+                </div>
+                <div class="problem-highlight">
+                    <p>
+                        The difference between success and failure isn't just strategy—it's understanding 
+                        how things actually work on the ground.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantage">
+        <div class="advantage-container">
+            <div class="section-label" style="color: var(--sand);">The Transition Advantage</div>
+            <h2>What was once <span>internal</span> is now your <span>strategic asset</span>.</h2>
             
-            <div class="value-grid">
-                <div class="value-card">
+            <div class="advantage-grid">
+                <div class="advantage-card">
                     <h3>The Networks Remain Active</h3>
                     <p>
-                        Regional stakeholder relationships across Asia, Latin America, and beyond don't disappear 
-                        with organizational change. They become accessible.
+                        Regional stakeholder relationships don't disappear with organizational transitions. 
+                        They remain accessible—and actionable.
                     </p>
                 </div>
                 
-                <div class="value-card">
+                <div class="advantage-card">
                     <h3>The Insights Are Available</h3>
                     <p>
-                        Two decades of understanding how D.C. policy translates to field execution, how compliance 
-                        actually works, and what makes programs succeed.
+                        Two decades of understanding how D.C. policy translates to field execution. 
+                        How compliance actually works. What makes programs succeed.
                     </p>
                 </div>
                 
-                <div class="value-card">
-                    <h3>The Continuity Is Critical</h3>
+                <div class="advantage-card">
+                    <h3>The Relationships Endure</h3>
                     <p>
-                        In a moment of disruption, institutional memory isn't a luxury—it's the difference between 
-                        adapting and floundering.
+                        While agencies pivot, the people who make development work—government officials, 
+                        civil society leaders, implementing partners—remain engaged.
                     </p>
                 </div>
+            </div>
+
+            <div class="advantage-statement">
+                <p>
+                    <strong>With over 20 years of executive leadership at USAID</strong>—including service as Interim Assistant 
+                    Administrator for Asia and Assistant General Counsel—I provide the continuity and strategic foresight 
+                    organizations need to navigate this disruption. I help partners translate institutional memory into 
+                    competitive advantage.
+                </p>
             </div>
         </div>
     </section>
 
     <section class="services">
         <div class="section-container">
-            <div class="section-label" style="color: var(--sand);">How I Help</div>
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 1rem; font-weight: 400;">
-                Strategic Services for This Moment
+            <div class="section-label">Core Services</div>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 1rem; font-weight: 400; color: var(--midnight);">
+                How I Help You Navigate This Moment
             </h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">THE DE-BRIEF</div>
-                    <h3>Strategic Intelligence & Analysis</h3>
+                    <div class="service-number">01</div>
+                    <h3>Strategic De-Brief & Analysis</h3>
                     <p>
-                        Understand the why behind recent changes and the how of moving forward. I provide strategic 
-                        de-briefs that help you see around corners and anticipate what's next.
+                        Understand the why behind recent changes and the how of moving forward. I provide intelligence 
+                        that helps you see around corners and position for what's next.
                     </p>
                     <ul>
                         <li>Policy transition analysis</li>
                         <li>Stakeholder mapping and strategy</li>
-                        <li>Future scenario planning</li>
+                        <li>Scenario planning and positioning</li>
                     </ul>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">THE REGULATORY COMPASS</div>
-                    <h3>Compliance Navigation & Risk</h3>
+                    <div class="service-number">02</div>
+                    <h3>The Regulatory Compass</h3>
                     <p>
-                        Audit your current portfolios against the evolving landscape. From USAID ADS to FAR compliance, 
-                        I help you stay ahead of regulatory requirements.
+                        Navigate evolving compliance frameworks with confidence. From USAID ADS to FAR, 
+                        I help you audit portfolios and stay ahead of requirements.
                     </p>
                     <ul>
                         <li>Compliance post-mortems</li>
                         <li>Risk assessment and mitigation</li>
-                        <li>Regulatory roadmap development</li>
+                        <li>Audit preparation and response</li>
                     </ul>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">THE NETWORK MAP</div>
-                    <h3>Regional Partnership Building</h3>
+                    <div class="service-number">03</div>
+                    <h3>The Network Map</h3>
                     <p>
-                        While agencies transition, regional networks remain active. I help you leverage decades 
-                        of relationships to build the coalitions that matter.
+                        Leverage decades of regional networks that remain active across Asia, Latin America, 
+                        and beyond. I help you build the partnerships that deliver results.
                     </p>
                     <ul>
                         <li>Regional stakeholder engagement</li>
                         <li>Government and civil society liaison</li>
-                        <li>Multi-party facilitation</li>
+                        <li>Coalition building and facilitation</li>
                     </ul>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">THE COMPETITIVE EDGE</div>
+                    <div class="service-number">04</div>
                     <h3>Proposal Strategy & Positioning</h3>
                     <p>
-                        Win in a competitive landscape by understanding what evaluators actually look for. 
-                        I help you craft proposals that leverage institutional knowledge.
+                        Win in competitive landscapes by understanding what evaluators actually seek. 
+                        I help you craft proposals that stand out and deliver.
                     </p>
                     <ul>
                         <li>Capture strategy and positioning</li>
@@ -654,7 +778,7 @@
             </div>
 
             <div class="logos">
-                <div class="logos-label">Experience Spanning Leading Organizations</div>
+                <div class="logos-label">Trusted By Leading Organizations</div>
                 <div class="logos-grid">
                     <div class="logo-item">USAID</div>
                     <div class="logo-item">UNDP</div>
@@ -669,12 +793,12 @@
 
     <section class="final-cta" id="contact">
         <div class="section-container">
-            <h2>Turn Transition into Advantage</h2>
+            <h2>Ready to Navigate What's Next?</h2>
             <p>
-                Let's discuss how institutional knowledge and strategic foresight can position your 
-                organization to thrive in this moment of change.
+                Let's discuss how institutional knowledge and regional expertise can help your organization 
+                thrive in this new landscape.
             </p>
-            <a href="mailto:your.email@example.com" class="cta-button">Schedule a Strategic Consultation</a>
+            <a href="mailto:your.email@example.com" class="cta-button">Schedule a Consultation</a>
             <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--slate);">
                 Or reach me directly at: <strong>+1 (555) 123-4567</strong>
             </p>
@@ -713,7 +837,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .stat-card, .value-card').forEach(el => {
+        document.querySelectorAll('.service-card, .stat-card, .advantage-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
