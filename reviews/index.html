@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Concepts - Review</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a2332 0%, #2d3e50 100%);
+            min-height: 100vh;
+            padding: 3rem 1.5rem;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 4rem;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .option-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(194, 115, 85, 0.5);
+        }
+
+        .option-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #c27355;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .option-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .option-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #8a9a7b;
+            font-weight: bold;
+        }
+
+        .view-btn {
+            display: inline-block;
+            background: #c27355;
+            color: white;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .view-btn:hover {
+            background: #8a9a7b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(194, 115, 85, 0.3);
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #c27355;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            border-radius: 6px;
+        }
+
+        .instructions h3 {
+            margin-bottom: 1rem;
+            color: #c27355;
+        }
+
+        .instructions p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Landing Page Concepts</h1>
+        <p class="subtitle">Review three design approaches for the Strategic Development Advisory website</p>
+
+        <div class="options-grid">
+            <!-- Option A -->
+            <div class="option-card">
+                <div class="option-number">A</div>
+                <h2 class="option-title">Subtle & Refined</h2>
+                <p class="option-description">
+                    Minimalist approach with understated elegance. Emphasizes expertise through restraint.
+                </p>
+                <ul class="features">
+                    <li>Clean, professional aesthetic</li>
+                    <li>Muted color palette</li>
+                    <li>Trust through simplicity</li>
+                    <li>Corporate-friendly</li>
+                </ul>
+                <a href="option-a/" class="view-btn" target="_blank">View Option A</a>
+            </div>
+
+            <!-- Option B -->
+            <div class="option-card">
+                <div class="option-number">B</div>
+                <h2 class="option-title">Bold & Confident</h2>
+                <p class="option-description">
+                    Strong visual presence with assertive messaging. Projects authority and decisiveness.
+                </p>
+                <ul class="features">
+                    <li>Striking design elements</li>
+                    <li>Dynamic animations</li>
+                    <li>Immediate impact</li>
+                    <li>Memorable experience</li>
+                </ul>
+                <a href="option-b/" class="view-btn" target="_blank">View Option B</a>
+            </div>
+
+            <!-- Option C -->
+            <div class="option-card">
+                <div class="option-number">C</div>
+                <h2 class="option-title">Hybrid Approach</h2>
+                <p class="option-description">
+                    Balanced design combining professionalism with visual interest. Best of both worlds.
+                </p>
+                <ul class="features">
+                    <li>Sophisticated yet approachable</li>
+                    <li>Strategic use of color</li>
+                    <li>Versatile messaging</li>
+                    <li>Broad appeal</li>
+                </ul>
+                <a href="option-c/" class="view-btn" target="_blank">View Option C</a>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>Review Instructions</h3>
+            <p><strong>Click each option</strong> to view the full landing page in a new tab.</p>
+            <p><strong>Test on mobile:</strong> View on your phone to see responsive design.</p>
+            <p><strong>Consider:</strong> Which approach best represents your brand? Which will resonate with your target clients (NGOs, foundations, government agencies)?</p>
+            <p><strong>Provide feedback on:</strong> Visual appeal, messaging clarity, credibility, and which version you'd be most likely to engage with.</p>
+        </div>
+
+        <div class="footer">
+            <p>Strategic Development Advisory • Landing Page Concepts • February 2026</p>
+        </div>
+    </div>
+</body>
+</html>
