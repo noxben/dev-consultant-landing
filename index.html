@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institutional Knowledge in Transition | Strategic Development Advisory</title>
+    <title>Strategic Development Advisory | 20 Years of Institutional Memory, Now Available</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WR9718JFYB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WR9718JFYB');
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --midnight: #1a2332;
-            --slate: #4a5568;
-            --sand: #e8dfd2;
-            --terra: #c27355;
-            --sage: #8a9a7b;
-            --ice: #f7f9fb;
-            --gold: #d4a574;
+            --midnight: #0d1b2a;
+            --naval: #1b263b;
+            --slate: #415a77;
+            --steel: #778da9;
+            --ice: #e0e1dd;
+            --paper: #f8f9fa;
+            --terra: #d4634f;
+            --brass: #b8860b;
+            --success: #2d6a4f;
         }
 
         * {
@@ -25,22 +37,25 @@
         }
 
         body {
-            font-family: 'Work Sans', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--midnight);
-            background: var(--ice);
+            background: var(--paper);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(247, 249, 251, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(248, 249, 250, 0.92);
+            backdrop-filter: blur(16px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(26, 35, 50, 0.1);
-            animation: slideDown 0.6s ease;
+            border-bottom: 1px solid rgba(13, 27, 42, 0.08);
+            animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         @keyframes slideDown {
@@ -57,50 +72,52 @@
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 1.5rem 3rem;
+            padding: 1.25rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
             color: var(--midnight);
+            text-transform: uppercase;
         }
 
         .cta-button {
             background: var(--midnight);
             color: white;
-            padding: 0.75rem 2rem;
+            padding: 0.875rem 2rem;
             border: none;
-            font-family: 'Work Sans', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             text-decoration: none;
             display: inline-block;
+            border-radius: 2px;
         }
 
         .cta-button:hover {
             background: var(--terra);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(194, 115, 85, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 12px 24px rgba(212, 99, 79, 0.25);
         }
 
-        /* Hero Section - Bold Transition Focus */
+        /* Hero Section */
         .hero {
             margin-top: 80px;
-            min-height: 90vh;
+            min-height: 92vh;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--midnight) 0%, #2d3e50 100%);
+            background: linear-gradient(155deg, var(--midnight) 0%, var(--naval) 50%, #243447 100%);
         }
 
         .hero::before {
@@ -110,25 +127,54 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(138, 154, 123, 0.1) 0%, transparent 50%);
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(212, 99, 79, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 70%, rgba(184, 134, 11, 0.06) 0%, transparent 45%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/></pattern></defs><rect width="1000" height="1000" fill="url(%23grid)"/></svg>');
+            opacity: 1;
             z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to bottom, transparent, var(--paper));
+            z-index: 2;
+        }
+
+        .network-bg {
+            position: absolute;
+            top: 10%;
+            right: -10%;
+            width: 900px;
+            height: 900px;
+            opacity: 0.08;
+            z-index: 1;
+            animation: rotateNetwork 120s linear infinite;
+        }
+
+        @keyframes rotateNetwork {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .hero-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 4rem 3rem;
+            padding: 5rem 3rem;
             position: relative;
-            z-index: 2;
-            animation: fadeInUp 1s ease;
+            z-index: 3;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -141,13 +187,17 @@
         }
 
         .hero-label {
-            font-size: 0.9rem;
-            letter-spacing: 3px;
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-            animation: fadeIn 1s ease 0.3s both;
+            color: var(--terra);
+            margin-bottom: 2rem;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            background: rgba(212, 99, 79, 0.1);
+            border-left: 3px solid var(--terra);
+            animation: fadeIn 1s ease 0.2s both;
         }
 
         @keyframes fadeIn {
@@ -156,73 +206,94 @@
         }
 
         .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 4.5rem;
-            font-weight: 300;
-            line-height: 1.2;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 5rem;
+            font-weight: 400;
+            line-height: 1.1;
             color: white;
             margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.5s both;
+            letter-spacing: -1px;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
         }
 
         .hero h1 strong {
-            font-weight: 600;
-            color: var(--gold);
+            font-weight: 700;
+            color: var(--terra);
+            display: block;
+            font-size: 5.5rem;
+            margin-top: 0.25rem;
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
-            color: var(--sand);
+            font-size: 1.25rem;
+            color: var(--ice);
             max-width: 750px;
-            line-height: 1.8;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.7s both;
+            line-height: 1.7;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
         }
 
-        .hero-pitch {
-            font-size: 1.1rem;
-            color: rgba(232, 223, 210, 0.9);
-            max-width: 750px;
-            line-height: 1.8;
-            font-weight: 300;
+        .hero-meta {
+            display: flex;
+            gap: 4rem;
             margin-bottom: 3rem;
-            padding-left: 2rem;
-            border-left: 3px solid var(--gold);
-            animation: fadeInUp 1s ease 0.9s both;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-number {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--brass);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-label {
+            font-size: 0.9rem;
+            color: var(--steel);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
         }
 
         .hero-cta {
-            animation: fadeInUp 1s ease 1.1s both;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
         }
 
         .hero .cta-button {
-            background: var(--gold);
-            padding: 1rem 3rem;
+            background: var(--terra);
+            padding: 1.125rem 3rem;
             font-size: 1rem;
-            color: var(--midnight);
+            font-weight: 600;
         }
 
         .hero .cta-button:hover {
-            background: var(--terra);
-            color: white;
+            background: var(--brass);
         }
 
-        /* Value Proposition Section */
-        .value-prop {
-            padding: 8rem 3rem;
+        /* Positioning Statement */
+        .positioning {
+            padding: 7rem 3rem;
             background: white;
             position: relative;
         }
 
-        .value-prop::before {
+        .positioning::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            left: 5%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--terra), transparent);
+            opacity: 0.3;
         }
 
         .section-container {
@@ -231,63 +302,146 @@
         }
 
         .section-label {
-            font-size: 0.85rem;
-            letter-spacing: 2px;
+            font-size: 0.75rem;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
             color: var(--slate);
-            margin-bottom: 1rem;
-            font-weight: 500;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
         }
 
-        .value-prop h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
+        .positioning h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3.5rem;
             font-weight: 400;
-            line-height: 1.3;
+            line-height: 1.2;
             color: var(--midnight);
-            max-width: 800px;
+            max-width: 900px;
             margin-bottom: 3rem;
+            letter-spacing: -0.5px;
         }
 
-        .value-grid {
+        .positioning-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            margin-top: 4rem;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 5rem;
+            margin-top: 3rem;
         }
 
-        .value-card {
-            padding: 2.5rem;
-            background: var(--ice);
-            border-top: 3px solid var(--gold);
-            transition: all 0.3s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(26, 35, 50, 0.1);
-        }
-
-        .value-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            color: var(--midnight);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .value-card p {
-            font-size: 1.05rem;
+        .positioning-text {
+            font-size: 1.15rem;
             color: var(--slate);
             line-height: 1.8;
         }
 
-        /* Services Section - Reframed */
+        .positioning-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .positioning-text strong {
+            color: var(--midnight);
+            font-weight: 600;
+        }
+
+        .positioning-callout {
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--naval) 100%);
+            padding: 3rem;
+            position: relative;
+            border-top: 4px solid var(--terra);
+        }
+
+        .positioning-callout::before {
+            content: '"';
+            font-family: 'Libre Baskerville', serif;
+            font-size: 10rem;
+            position: absolute;
+            top: -1rem;
+            right: 2rem;
+            color: var(--terra);
+            opacity: 0.15;
+            line-height: 1;
+        }
+
+        .positioning-callout p {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 7rem 3rem;
+            background: var(--ice);
+            position: relative;
+        }
+
+        .problem h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: var(--midnight);
+            max-width: 850px;
+            margin-bottom: 3rem;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .challenge-card {
+            background: white;
+            padding: 2.5rem;
+            border-left: 3px solid var(--terra);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(13, 27, 42, 0.08);
+        }
+
+        .challenge-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--terra);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            border-radius: 2px;
+        }
+
+        .challenge-card h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--midnight);
+        }
+
+        .challenge-card p {
+            color: var(--slate);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Services Section */
         .services {
-            padding: 8rem 3rem;
+            padding: 7rem 3rem;
             background: var(--midnight);
             color: white;
             position: relative;
+            overflow: hidden;
         }
 
         .services::before {
@@ -295,175 +449,505 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 40%;
+            width: 50%;
             height: 100%;
-            background: radial-gradient(circle at center, rgba(212, 165, 116, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle at 70% 50%, rgba(212, 99, 79, 0.08) 0%, transparent 60%);
+        }
+
+        .services h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .services-intro {
+            font-size: 1.15rem;
+            color: var(--steel);
+            max-width: 700px;
+            margin-bottom: 4rem;
+            line-height: 1.7;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 4rem;
-            margin-top: 4rem;
+            gap: 3rem;
             position: relative;
             z-index: 2;
         }
 
         .service-card {
-            border-left: 3px solid var(--gold);
-            padding-left: 2rem;
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 3rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--terra);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-card:hover::before {
+            transform: scaleY(1);
+            transform-origin: top;
         }
 
         .service-card:hover {
-            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(212, 99, 79, 0.3);
+            transform: translateY(-4px);
         }
 
-        .service-icon {
-            font-size: 1.2rem;
-            color: var(--gold);
-            margin-bottom: 1rem;
-            font-weight: 600;
-            letter-spacing: 1px;
+        .service-number {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1rem;
+            color: var(--brass);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            display: block;
         }
 
         .service-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
             color: white;
+            line-height: 1.3;
         }
 
         .service-card p {
-            color: var(--sand);
+            color: var(--steel);
             line-height: 1.8;
             font-size: 1.05rem;
+            margin-bottom: 1.5rem;
         }
 
         .service-card ul {
-            margin-top: 1.5rem;
             list-style: none;
+            margin-top: 1.5rem;
         }
 
         .service-card li {
-            padding-left: 1.5rem;
+            padding-left: 1.75rem;
             position: relative;
-            margin-bottom: 0.75rem;
-            color: var(--sand);
+            margin-bottom: 0.875rem;
+            color: var(--ice);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .service-card li::before {
             content: '→';
             position: absolute;
             left: 0;
-            color: var(--gold);
+            color: var(--terra);
+            font-weight: 700;
         }
 
         /* Proof Section */
         .proof {
-            padding: 8rem 3rem;
-            background: var(--sand);
+            padding: 7rem 3rem;
+            background: white;
+            position: relative;
+        }
+
+        .proof-intro {
+            max-width: 700px;
+            margin-bottom: 5rem;
+        }
+
+        .proof-intro p {
+            font-size: 1.15rem;
+            color: var(--slate);
+            line-height: 1.8;
+        }
+
+        .stats-container {
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--naval) 100%);
+            padding: 5rem 4rem;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 5rem;
+        }
+
+        .stats-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="1000" height="1000" fill="url(%23dots)"/></svg>');
+            opacity: 0.5;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 4rem;
-            margin-top: 4rem;
+            position: relative;
+            z-index: 2;
         }
 
         .stat-card {
-            text-align: center;
+            text-align: left;
+            position: relative;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            right: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60%;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-card:last-child::after {
+            display: none;
         }
 
         .stat-number {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Libre Baskerville', serif;
             font-size: 4rem;
-            font-weight: 600;
-            color: var(--midnight);
+            font-weight: 700;
+            color: var(--brass);
             line-height: 1;
             margin-bottom: 1rem;
         }
 
         .stat-label {
-            font-size: 1.1rem;
-            color: var(--slate);
+            font-size: 0.95rem;
+            color: var(--ice);
             line-height: 1.6;
+            font-weight: 500;
         }
 
+        /* Logos Section */
         .logos {
-            margin-top: 6rem;
             text-align: center;
         }
 
         .logos-label {
-            font-size: 0.85rem;
-            letter-spacing: 2px;
+            font-size: 0.75rem;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
             color: var(--slate);
             margin-bottom: 3rem;
+            font-weight: 700;
         }
 
         .logos-grid {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 3rem;
             align-items: center;
-            gap: 4rem;
-            flex-wrap: wrap;
         }
 
         .logo-item {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
             color: var(--midnight);
-            opacity: 0.6;
+            opacity: 0.5;
             transition: opacity 0.3s ease;
+            text-align: center;
         }
 
         .logo-item:hover {
             opacity: 1;
         }
 
-        /* CTA Section */
-        .final-cta {
-            padding: 8rem 3rem;
-            background: white;
+        /* Differentiators */
+        .differentiators {
+            padding: 7rem 3rem;
+            background: var(--ice);
+        }
+
+        .differentiators h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--midnight);
+            margin-bottom: 4rem;
             text-align: center;
         }
 
-        .final-cta h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
-            font-weight: 400;
-            color: var(--midnight);
-            margin-bottom: 2rem;
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .final-cta p {
-            font-size: 1.2rem;
+        .diff-card {
+            background: white;
+            padding: 3rem;
+            text-align: center;
+            border-top: 4px solid var(--terra);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .diff-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .diff-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--midnight), var(--naval));
+            color: var(--brass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            font-weight: 700;
+        }
+
+        .diff-card h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--midnight);
+        }
+
+        .diff-card p {
             color: var(--slate);
-            max-width: 600px;
-            margin: 0 auto 3rem;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Contact Form Section */
+        .contact-form-section {
+            padding: 8rem 3rem;
+            background: linear-gradient(135deg, var(--midnight) 0%, var(--naval) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid2" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="1000" height="1000" fill="url(%23grid2)"/></svg>');
+        }
+
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-form-container h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 4rem;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-form-container > p {
+            font-size: 1.25rem;
+            color: var(--steel);
+            text-align: center;
+            margin-bottom: 4rem;
             line-height: 1.8;
         }
 
-        .final-cta .cta-button {
-            padding: 1.25rem 3.5rem;
-            font-size: 1.1rem;
+        /* Netlify Form Styling */
+        .consultation-form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .consultation-form label {
+            color: var(--ice);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .consultation-form input,
+        .consultation-form select,
+        .consultation-form textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .consultation-form input::placeholder,
+        .consultation-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .consultation-form input:focus,
+        .consultation-form select:focus,
+        .consultation-form textarea:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--terra);
+            outline: none;
+        }
+
+        .consultation-form select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="white" d="M6 8L0 0h12z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 3rem;
+        }
+
+        .consultation-form select option {
+            background: var(--midnight);
+            color: white;
+        }
+
+        .consultation-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            background: var(--terra) !important;
+            color: white !important;
+            padding: 1.25rem 3.5rem !important;
+            font-size: 1.1rem !important;
+            font-weight: 600 !important;
+            border: none !important;
+            cursor: pointer !important;
+            transition: all 0.35s ease !important;
+            width: 100%;
+            font-family: 'Inter', sans-serif !important;
+            letter-spacing: 0.3px;
+        }
+
+        .form-submit:hover {
+            background: var(--brass) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(212, 99, 79, 0.3);
+        }
+
+        .contact-details {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--steel);
+        }
+
+        .contact-details strong {
+            color: var(--brass);
+            font-weight: 600;
+        }
+
+        .contact-details a {
+            color: var(--brass);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--terra);
+        }
+
+        /* Footer */
         footer {
             padding: 3rem;
             background: var(--midnight);
-            color: var(--sand);
+            color: var(--steel);
             text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         footer p {
             font-size: 0.9rem;
             opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero h1 strong {
+                font-size: 4rem;
+            }
+
+            .services-grid,
+            .challenges-grid,
+            .diff-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .logos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .positioning-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -475,91 +959,179 @@
                 font-size: 2.5rem;
             }
 
+            .hero h1 strong {
+                font-size: 3rem;
+            }
+
             .hero-subtitle {
                 font-size: 1.1rem;
             }
 
-            .value-grid {
-                grid-template-columns: 1fr;
+            .hero-meta {
+                flex-direction: column;
+                gap: 2rem;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
+            .positioning h2,
+            .problem h2,
+            .services h2,
+            .differentiators h2 {
+                font-size: 2rem;
+            }
+
+            .contact-form-container h2 {
+                font-size: 2.5rem;
             }
 
             .stats-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+            }
+
+            .stat-card::after {
+                display: none;
+            }
+
+            .consultation-form {
+                padding: 2rem 1.5rem;
             }
         }
 
+        /* Smooth scroll */
         html {
             scroll-behavior: smooth;
         }
 
+        /* Selection color */
         ::selection {
-            background: var(--gold);
-            color: var(--midnight);
+            background: var(--terra);
+            color: white;
         }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo">Strategic Advisory</div>
+            <div class="logo">Pelican Insight</div>
             <a href="#contact" class="cta-button">Schedule Consultation</a>
         </div>
     </nav>
 
     <section class="hero">
+        <div class="network-bg">
+            <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="nodeGlow">
+                        <stop offset="0%" style="stop-color:rgba(212,99,79,0.3);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgba(212,99,79,0);stop-opacity:0" />
+                    </radialGradient>
+                </defs>
+                <g opacity="0.6">
+                    <line x1="150" y1="150" x2="400" y2="200" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                    <line x1="400" y1="200" x2="650" y2="150" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                    <line x1="650" y1="150" x2="600" y2="400" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                    <line x1="600" y1="400" x2="400" y2="500" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                    <line x1="400" y1="500" x2="200" y2="450" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                    <line x1="200" y1="450" x2="150" y2="150" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                    <line x1="400" y1="200" x2="400" y2="500" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                    <circle cx="150" cy="150" r="40" fill="url(#nodeGlow)"/>
+                    <circle cx="400" cy="200" r="40" fill="url(#nodeGlow)"/>
+                    <circle cx="650" cy="150" r="40" fill="url(#nodeGlow)"/>
+                    <circle cx="600" cy="400" r="40" fill="url(#nodeGlow)"/>
+                    <circle cx="400" cy="500" r="40" fill="url(#nodeGlow)"/>
+                    <circle cx="200" cy="450" r="40" fill="url(#nodeGlow)"/>
+                </g>
+            </svg>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-label">Institutional Knowledge in a Time of Transition</div>
-                <h1>The <strong>Externalized Brain</strong> of U.S. Foreign Assistance</h1>
+                <div class="hero-label">20 Years of Institutional Memory—Now Available</div>
+                <h1>When Federal Development<strong>Shifts Overnight</strong></h1>
                 <p class="hero-subtitle">
-                    As the landscape of U.S. foreign assistance undergoes a historic pivot, the bridge between 
-                    past policy and future implementation has never been more vital.
+                    Former USAID Regional Director bringing two decades of field-tested expertise, 
+                    regional networks, and institutional knowledge to organizations navigating 
+                    the new landscape of international development.
                 </p>
-                <p class="hero-pitch">
-                    With over 20 years of executive leadership at USAID—including service as Interim Assistant Administrator 
-                    for Asia and Assistant General Counsel—I offer an unmatched perspective on the legal and operational 
-                    mechanics of global development. I help organizations translate institutional memory into strategic advantage.
-                </p>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <div class="meta-number">$200M+</div>
+                        <div class="meta-label">Portfolio Managed</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-number">15</div>
+                        <div class="meta-label">Regional Networks</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-number">20+</div>
+                        <div class="meta-label">Years Experience</div>
+                    </div>
+                </div>
                 <div class="hero-cta">
-                    <a href="#contact" class="cta-button">Access This Knowledge</a>
+                    <a href="#contact" class="cta-button">Let's Discuss Your Needs</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="value-prop">
+    <section class="positioning">
         <div class="section-container">
-            <div class="section-label">The Opportunity</div>
-            <h2>What was once internal is now your strategic asset.</h2>
-            
-            <div class="value-grid">
-                <div class="value-card">
-                    <h3>The Networks Remain Active</h3>
+            <div class="section-label">Why This Matters Now</div>
+            <h2>The development landscape just changed. Your advantage is working with someone who knows what it looked like yesterday.</h2>
+            <div class="positioning-grid">
+                <div class="positioning-text">
                     <p>
-                        Regional stakeholder relationships across Asia, Latin America, and beyond don't disappear 
-                        with organizational change. They become accessible.
+                        <strong>The rules changed overnight.</strong> Federal development priorities, funding mechanisms, 
+                        and compliance frameworks are in flux. Organizations that thrived under the old paradigm 
+                        are scrambling to adapt.
+                    </p>
+                    <p>
+                        You don't need another consultant with a PowerPoint deck. You need someone who spent 
+                        20 years inside the system—who knows which doors to knock on, which processes actually 
+                        matter, and how to navigate bureaucracy that doesn't play by its own rules.
+                    </p>
+                    <p>
+                        <strong>Institutional memory isn't just experience—it's relationships, regional knowledge, 
+                        and the ability to see around corners.</strong> It's knowing who to call when policy 
+                        contradicts reality. It's understanding how decisions actually get made, not how 
+                        they're supposed to get made.
                     </p>
                 </div>
-                
-                <div class="value-card">
-                    <h3>The Insights Are Available</h3>
+                <div class="positioning-callout">
                     <p>
-                        Two decades of understanding how D.C. policy translates to field execution, how compliance 
-                        actually works, and what makes programs succeed.
+                        I spent two decades building the networks and expertise that turn strategy 
+                        into results. Now that knowledge is available to you.
                     </p>
                 </div>
-                
-                <div class="value-card">
-                    <h3>The Continuity Is Critical</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="problem">
+        <div class="section-container">
+            <div class="section-label">The Challenges You're Facing</div>
+            <h2>International development just became exponentially more complicated. the bridge between past policy and future implementation has never been more vital.</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-icon">01</div>
+                    <h3>Shifting Federal Landscape</h3>
                     <p>
-                        In a moment of disruption, institutional memory isn't a luxury—it's the difference between 
-                        adapting and floundering.
+                        Budget cuts, priority realignments, and policy uncertainty mean yesterday's 
+                        strategies won't work tomorrow. You need real-time intelligence and adaptive approaches.
+                    </p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">02</div>
+                    <h3>Compliance Complexity</h3>
+                    <p>
+                        Regulatory requirements are tightening while resources shrink. One misstep in 
+                        procurement, reporting, or audit compliance can derail years of work.
+                    </p>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon">03</div>
+                    <h3>Regional Networks</h3>
+                    <p>
+                        Local partnerships matter more than ever, but building authentic relationships 
+                        takes years. You need access to established networks that actually deliver.
                     </p>
                 </div>
             </div>
@@ -568,64 +1140,74 @@
 
     <section class="services">
         <div class="section-container">
-            <div class="section-label" style="color: var(--sand);">How I Help</div>
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 1rem; font-weight: 400;">
-                Strategic Services for This Moment
-            </h2>
+            <div class="section-label" style="color: var(--steel);">Core Services</div>
+            <h2>What I Bring to Your Organization</h2>
+            <p class="services-intro">
+                Two decades of field experience distilled into strategic advisory services that bridge 
+                the gap between D.C. policy and regional reality.
+            </p>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">THE DE-BRIEF</div>
-                    <h3>Strategic Intelligence & Analysis</h3>
+                    <span class="service-number">01 — STRATEGY</span>
+                    <h3>Strategic Planning & Program Architecture</h3>
                     <p>
-                        Understand the why behind recent changes and the how of moving forward. I provide strategic 
-                        de-briefs that help you see around corners and anticipate what's next.
+                        Turn ambitious goals into executable, audit-proof plans. I design development programs 
+                        that balance donor requirements, local political realities, and sustainable impact—
+                        without drowning in compliance theater.
                     </p>
                     <ul>
-                        <li>Policy transition analysis</li>
-                        <li>Stakeholder mapping and strategy</li>
-                        <li>Future scenario planning</li>
+                        <li>Theory of Change development grounded in regional feasibility</li>
+                        <li>Portfolio optimization under constrained budgets</li>
+                        <li>Adaptive management frameworks that survive contact with reality</li>
+                        <li>Risk-weighted scenario planning for volatile environments</li>
                     </ul>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">THE REGULATORY COMPASS</div>
-                    <h3>Compliance Navigation & Risk</h3>
+                    <span class="service-number">02 — COMPLIANCE</span>
+                    <h3>Federal Compliance & Risk Navigation</h3>
                     <p>
-                        Audit your current portfolios against the evolving landscape. From USAID ADS to FAR compliance, 
-                        I help you stay ahead of regulatory requirements.
+                        Federal regulations aren't just complex—they're often contradictory. I translate 
+                        USAID ADS, FAR, and OMB circulars into actionable guidance that keeps auditors 
+                        happy and programs moving.
                     </p>
                     <ul>
-                        <li>Compliance post-mortems</li>
-                        <li>Risk assessment and mitigation</li>
-                        <li>Regulatory roadmap development</li>
+                        <li>Pre-award compliance assessment and gap analysis</li>
+                        <li>Cost-sharing and match requirement structuring</li>
+                        <li>Indirect rate defense and negotiation support</li>
+                        <li>Audit preparation and response strategy</li>
                     </ul>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">THE NETWORK MAP</div>
-                    <h3>Regional Partnership Building</h3>
+                    <span class="service-number">03 — NETWORKS</span>
+                    <h3>Stakeholder Engagement & Coalition Building</h3>
                     <p>
-                        While agencies transition, regional networks remain active. I help you leverage decades 
-                        of relationships to build the coalitions that matter.
+                        Development work lives or dies on relationships—with host governments, civil society, 
+                        and donor agencies. I leverage decades of regional networks to accelerate partnerships 
+                        that would normally take years to build.
                     </p>
                     <ul>
-                        <li>Regional stakeholder engagement</li>
-                        <li>Government and civil society liaison</li>
-                        <li>Multi-party facilitation</li>
+                        <li>Host government liaison and memoranda of understanding</li>
+                        <li>Civil society consortium building and management</li>
+                        <li>Multi-donor coordination and harmonization</li>
+                        <li>Public-private partnership structuring</li>
                     </ul>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">THE COMPETITIVE EDGE</div>
-                    <h3>Proposal Strategy & Positioning</h3>
+                    <span class="service-number">04 — CAPTURE</span>
+                    <h3>Proposal Development & Competitive Positioning</h3>
                     <p>
-                        Win in a competitive landscape by understanding what evaluators actually look for. 
-                        I help you craft proposals that leverage institutional knowledge.
+                        Winning federal development contracts requires more than technical excellence—you need 
+                        evaluator psychology, differentiation strategy, and positioning that makes reviewers 
+                        remember you on page 47.
                     </p>
                     <ul>
-                        <li>Capture strategy and positioning</li>
-                        <li>Technical approach refinement</li>
-                        <li>Past performance storytelling</li>
+                        <li>Capture planning and opportunity assessment</li>
+                        <li>Technical approach design and narrative development</li>
+                        <li>Past performance positioning and lessons learned framing</li>
+                        <li>Color team review with evaluator perspective</li>
                     </ul>
                 </div>
             </div>
@@ -635,57 +1217,199 @@
     <section class="proof">
         <div class="section-container">
             <div class="section-label">Track Record</div>
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--midnight); font-weight: 400;">
-                Impact by the Numbers
-            </h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">$200M+</div>
-                    <p class="stat-label">Portfolio Value Managed<br>Across Multiple Regions</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">20+</div>
-                    <p class="stat-label">Years of Field Experience<br>in Complex Environments</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">15</div>
-                    <p class="stat-label">Countries with Active<br>Networks & Partnerships</p>
+            <div class="proof-intro">
+                <h2 style="font-family: 'Libre Baskerville', serif; font-size: 3rem; color: var(--midnight); font-weight: 400; margin-bottom: 1.5rem;">
+                    Results That Matter
+                </h2>
+                <p>
+                    Twenty years of measurable impact across some of the world's most complex operating environments.
+                </p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">$200M+</div>
+                        <p class="stat-label">Portfolio Value<br>Managed & Delivered</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <p class="stat-label">Years Field<br>Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15</div>
+                        <p class="stat-label">Active Regional<br>Networks</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <p class="stat-label">Audit Pass<br>Rate</p>
+                    </div>
                 </div>
             </div>
 
             <div class="logos">
-                <div class="logos-label">Experience Spanning Leading Organizations</div>
+                <div class="logos-label">Trusted By Leading Development Organizations</div>
                 <div class="logos-grid">
                     <div class="logo-item">USAID</div>
                     <div class="logo-item">UNDP</div>
                     <div class="logo-item">World Bank</div>
                     <div class="logo-item">Save the Children</div>
-                    <div class="logo-item">CARE</div>
+                    <div class="logo-item">CARE Int'l</div>
                     <div class="logo-item">Mercy Corps</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="final-cta" id="contact">
+    <section class="differentiators">
         <div class="section-container">
-            <h2>Turn Transition into Advantage</h2>
+            <h2>Why This Expertise Can't Be Replicated</h2>
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <div class="diff-icon">⚡</div>
+                    <h3>The Navigator</h3>
+                    <p>
+                        I don't just know the regulations—I know which ones actually matter and how 
+                        to satisfy them without paralysis. Twenty years of federal compliance means 
+                        knowing the shortcuts that keep auditors happy.
+                    </p>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-icon">🌐</div>
+                    <h3>The Bridge</h3>
+                    <p>
+                        Regional networks take decades to build. Mine are already established—with 
+                        government ministries, civil society leaders, and implementing partners across 
+                        15 countries. You get immediate access.
+                    </p>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-icon">📈</div>
+                    <h3>The Scaler</h3>
+                    <p>
+                        Small pilots die in committee. I know how to take proof-of-concept and turn it 
+                        into regional programs—navigating the bureaucracy, securing buy-in, and maintaining 
+                        momentum through transitions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section" id="contact">
+        <div class="contact-form-container">
+            <h2>Ready to Navigate What's Next?</h2>
             <p>
-                Let's discuss how institutional knowledge and strategic foresight can position your 
-                organization to thrive in this moment of change.
+                Let's discuss how institutional knowledge, regional networks, and two decades of field 
+                experience can help your organization thrive in this new landscape.
             </p>
-            <a href="mailto:your.email@example.com" class="cta-button">Schedule a Strategic Consultation</a>
-            <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--slate);">
-                Or reach me directly at: <strong>+1 (555) 123-4567</strong>
+
+            <!-- Netlify Form -->
+            <form name="consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="consultation-form">
+                <!-- Honeypot field for spam protection -->
+                <input type="hidden" name="form-name" value="consultation" />
+                <p style="display: none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required placeholder="John">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required placeholder="Smith">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="john.smith@organization.org">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="organization">Organization *</label>
+                        <input type="text" id="organization" name="organization" required placeholder="Your Organization">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="orgType">Organization Type *</label>
+                        <select id="orgType" name="orgType" required>
+                            <option value="">Select type...</option>
+                            <option value="International NGO">International NGO</option>
+                            <option value="Government Agency">Government Agency</option>
+                            <option value="Private Sector">Private Sector</option>
+                            <option value="Foundation">Foundation</option>
+                            <option value="Multilateral">Multilateral Organization</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeline">Timeline *</label>
+                        <select id="timeline" name="timeline" required>
+                            <option value="">Select timeline...</option>
+                            <option value="Immediate">Immediate (within 1 month)</option>
+                            <option value="1-3 months">1-3 months</option>
+                            <option value="3-6 months">3-6 months</option>
+                            <option value="Exploratory">Exploratory</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="projectDescription">Project Description *</label>
+                        <textarea id="projectDescription" name="projectDescription" required placeholder="Tell me about your challenge, project scope, or what you need help with..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select range...</option>
+                            <option value="Under $25K">Under $25K</option>
+                            <option value="$25K - $50K">$25K - $50K</option>
+                            <option value="$50K - $100K">$50K - $100K</option>
+                            <option value="$100K+">$100K+</option>
+                            <option value="Not sure yet">Not sure yet</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceInterest">Primary Service Interest</label>
+                        <select id="serviceInterest" name="serviceInterest">
+                            <option value="">Select service...</option>
+                            <option value="Strategic Planning">Strategic Planning & Program Design</option>
+                            <option value="Compliance">Compliance & Risk Navigation</option>
+                            <option value="Stakeholder Engagement">Stakeholder Engagement & Coalition Building</option>
+                            <option value="Proposal Development">Proposal Development & Competitive Positioning</option>
+                            <option value="General Advisory">General Advisory</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="form-submit">Schedule a Confidential Consultation</button>
+            </form>
+
+            <p class="contact-details">
+                Or reach me directly:<br>
+                <strong>Email:</strong> <a href="mailto:peter@pelicaninsight.com">contact</a><br>
+                <strong>Phone:</strong> Available upon request<br>
+                Available for immediate engagement
             </p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Strategic Development Advisory. All rights reserved.</p>
+        <p>&copy; 2026 Strategic Development Advisory. Independent Consultant.</p>
     </footer>
 
     <script>
+        // Smooth scroll enhancement
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -699,9 +1423,10 @@
             });
         });
 
+        // Intersection Observer for progressive reveal
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -713,12 +1438,36 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .stat-card, .value-card').forEach(el => {
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .stat-card, .challenge-card, .diff-card').forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)';
             observer.observe(el);
         });
+
+        // Parallax effect for network background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElement = document.querySelector('.network-bg');
+            if (parallaxElement) {
+                const speed = 0.3;
+                parallaxElement.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg)`;
+            }
+        });
+
+        // Google Analytics event tracking for form submission
+        const form = document.querySelector('form[name="consultation"]');
+        if (form) {
+            form.addEventListener('submit', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'Contact',
+                        'event_label': 'Consultation Form'
+                    });
+                }
+            });
+        }
     </script>
 </body>
 </html>
