@@ -1,0 +1,28 @@
+# robots.txt for pelicaninsight.com
+User-agent: *
+Allow: /
+
+# AI Search Bots - Allow all
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemap
+Sitemap: https://pelicaninsight.com/sitemap.xml
